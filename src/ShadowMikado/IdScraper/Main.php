@@ -16,7 +16,6 @@ class Main extends PluginBase implements Listener
     {
         $blockid = new Config($this->getDataFolder() . "BlockId.json", Config::JSON);
         $itemid = new Config($this->getDataFolder() . "ItemId.json", Config::JSON);
-        print(filesize($this->getDataFolder() . "BlockId.json"));
 
         if (filesize($this->getDataFolder() . "BlockId.json") <= 2 && filesize($this->getDataFolder() . "ItemId.json") <= 2) {
             foreach (VanillaItems::getAll() as $item) {
